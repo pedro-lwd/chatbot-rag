@@ -16,7 +16,7 @@ docs = text_splitter.split_documents(docs)
 
 embedding_function = HuggingFaceEmbeddings(model_name="sentence-transformers/all-MiniLM-L6-v2", model_kwargs={'device': 'cpu'})
 
-# armazenar o vetor e criar  a base de dados.
+# criar o vectorstore, que é uma estrutura de dados que vai armazenar as informações dos documentos
 
 vectorstore = Chroma.from_documents(
     docs,
