@@ -44,7 +44,7 @@ def get_contexto_relevante_from_db(query):
         contexto += resultado.page_content + "\n"
     return contexto
         
-        
+            
 # gerar resposta prestativa.
 def gerar_resposta(prompt):
     genai.configure(api_key=key_gemini)
