@@ -6,11 +6,12 @@ import chromadb
 from langchain_huggingface import HuggingFaceEmbeddings
 from langchain_chroma import Chroma
 import google.generativeai as genai
+from config import key_gemini
 
 
 
 
-key_gemini = 'AIzaSyDsf7flMMJdh9586wmENUtfretOpsFc2s0'
+model_name = "gemini-2.0-flash-exp"
 
 
 # adeus colega.
@@ -44,12 +45,12 @@ def get_contexto_relevante_from_db(query):
         contexto += resultado.page_content + "\n"
     return contexto
         
-            
+        
 # gerar resposta prestativa.
 def gerar_resposta(prompt):
     genai.configure(api_key=key_gemini)
-    model = genai.configure(model_kwargs='gemini-1.5-pro')
-    resposta = model.gerar_conteudo(prompt)
+    model = genai.GenerativeModel(model_name)
+    resposta = model.generate_content(prompt)
     return resposta.text 
 # progamar o input pra pode fazer a pergunta
 while True:

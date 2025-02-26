@@ -175,3 +175,5 @@ cython_debug/
 
 chrome_db_nccn
 .sqlite3
+config.py
+assets
