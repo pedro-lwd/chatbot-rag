@@ -47,7 +47,7 @@ def processar_arquivos(caminho_arquivo, persist_directory="./chroma_db_nccn"):
         persist_directory="./chroma_db_nccn")
     
 
-    count = vectorstore.collection.count()
+    count = vectorstore._collection.count()
     print(f"Armazenamento de vetores criado com um total de {count} embeddings.")
     
     return vectorstore, count
