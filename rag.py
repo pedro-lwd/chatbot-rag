@@ -6,8 +6,12 @@ import chromadb
 from langchain_huggingface import HuggingFaceEmbeddings
 from langchain_chroma import Chroma
 import google.generativeai as genai
-from config import key_gemini
+from dotenv import load_dotenv
 
+
+load_dotenv()
+
+KEY_GEMINI = os.getenv('key_gemini')
 
 
 
@@ -48,7 +52,7 @@ def get_contexto_relevante_from_db(query):
         
 # gerar resposta prestativa.
 def gerar_resposta(prompt):
-    genai.configure(api_key=key_gemini)
+    genai.configure(api_key=KEY_GEMINI)
     model = genai.GenerativeModel(model_name)
     resposta = model.generate_content(prompt)
     return resposta.text 

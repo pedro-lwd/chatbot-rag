@@ -173,7 +173,9 @@ cython_debug/
 # PyPI configuration file
 .pypirc
 
-chrome_db_nccn
+./chrome_db_nccn
 .sqlite3
 config.py
 assets
+chroma_db_nccn
+static
