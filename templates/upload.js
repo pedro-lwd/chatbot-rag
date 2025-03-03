@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // URL da API para upload
     const UPLOAD_URL = 'http://localhost:5000/api/upload';
     
-    // Atualiza o nome dos arquivos selecionados
+    // cachorrows
     fileUpload.addEventListener('change', function() {
         if (this.files.length > 0) {
             const fileList = Array.from(this.files).map(file => file.name);
