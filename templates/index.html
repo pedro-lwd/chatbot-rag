@@ -1,19 +1,44 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
+    <title>Chat Bot QUATROIMIBICO</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Flask upload</h1>
+    <div class="container">
+        <!-- Seção de Upload -->
+        <div class="upload-container">
+            <h2>Upload de Documentos</h2>
+            <form id="uploadForm" enctype="multipart/form-data">
+                <div class="file-input-container">
+                    <label for="fileUpload" class="file-label">Escolher Arquivo</label>
+                    <input type="file" id="fileUpload" name="file" multiple>
+                    <span id="fileNames">Nenhum arquivo selecionado</span>
+                </div>
+                <button type="submit" class="upload-button">Enviar</button>
+            </form>
+            <div id="uploadStatus" class="upload-status"></div>
+        </div>
 
-    <form method='POST' enctype='multipart/form-data'>
-        {{form.hidden_tag()}}
-        {{form.submit()}}
-        {{form.arquivo()}}
-    </form>
-        
-    
+        <!-- Interface de Chat -->
+        <div class="chat-container">
+            <div class="chat-header">
+                <h2>EstudoComigo - Assistente Virtual</h2>
+            </div>
+            <div class="chat-messages" id="chatMessages">
+                <div class="message bot-message">
+                    Olá! Como posso ajudar você hoje?
+                </div>
+            </div>
+            <div class="chat-input">
+                <input type="text" id="userInput" placeholder="Digite sua mensagem aqui...">
+                <button id="sendButton">Enviar</button>
+            </div>
+        </div>
+    </div>
+    <script src="chat.js"></script>
+    <script src="upload.js"></script>
 </body>
 </html>

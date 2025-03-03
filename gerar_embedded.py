@@ -102,7 +102,7 @@ def processar_arquivos_novos(diretorio, persist_directory=persist_directory):
             continue
         
         # verificar extensão
-        extensao = os.path.splittext(nome_arquivo)[1]
+        extensao = os.path.splitext(nome_arquivo)[1]
         if extensao not in ['.pdf', '.ppt', '.pptx']:
             continue
         

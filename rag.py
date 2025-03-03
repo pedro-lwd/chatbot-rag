@@ -30,7 +30,7 @@ def gerar_prompt_rag(query, context):
     prompt = ("""You are a helpful and informative bot that answers questions using text in portuguese from brazil, and the reference context included below. \
   Be sure to respond in a complete sentence, being comprehensive, including all relevant background information. \
   However, you are talking to a non-technical audience, so be sure to break down complicated concepts and \
-  strike a friendly and converstional tone. \
+  strike a friendly and converstional tone. Do not hallucinate, Do not create information you dont know. \
   If the context is irrelevant to the answer, you may ignore it.
                 QUESTION: '{query}'
                 CONTEXT: '{context}'
@@ -57,11 +57,9 @@ def gerar_resposta(prompt):
     resposta = model.generate_content(prompt)
     return resposta.text 
 # progamar o input pra pode fazer a pergunta
-while True:
-    print("--------------------------------------------------------------------")
-    print("O que você deseja saber?")
-    query = input("Query: ")
-    contexto = get_contexto_relevante_from_db(query)
-    prompt = gerar_prompt_rag(query=query, context=contexto)
-    resposta = gerar_resposta(prompt=prompt)
+if __name__ == "__main__":
+    query = input("Digite sua pergunta: ")
+    contexto = get_contexto_relevante_from_db
+    prompt = gerar_prompt_rag
+    resposta = gerar_resposta
     print(resposta)

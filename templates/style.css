@@ -1,0 +1,201 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 20px auto;
+    display: flex;
+    flex-direction: stretch;
+    gap: 20px;
+    ;
+}
+
+/* Estilos do Upload */
+.upload-container {
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.upload-container h2 {
+    color: #4285f4;
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+.file-input-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.file-label {
+    background-color: #4285f4;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+#fileUpload {
+    display: none;
+}
+
+#fileNames {
+    color: #666;
+    flex: 1;
+}
+
+.upload-button {
+    background-color: #34a853;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.upload-status {
+    margin-top: 15px;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.status-success {
+    background-color: #d4edda;
+    color: #155724;
+}
+
+.status-error {
+    background-color: #f8d7da;
+    color: #721c24;
+}
+
+.status-progress {
+    background-color: #cce5ff;
+    color: #004085;
+}
+
+/* Estilos do Chat */
+.chat-container {
+    max-width: 100%;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.chat-header {
+    background-color: #4285f4;
+    color: white;
+    padding: 15px;
+    text-align: center;
+}
+
+.chat-messages {
+    height: 400px;
+    overflow-y: auto;
+    padding: 15px;
+    background-color: white;
+}
+
+.message {
+    margin-bottom: 15px;
+    padding: 10px;
+    border-radius: 10px;
+    max-width: 80%;
+    word-wrap: break-word;
+}
+
+.user-message {
+    background-color: #e3f2fd;
+    margin-left: auto;
+    text-align: right;
+}
+
+.bot-message {
+    background-color: #f1f1f1;
+    margin-right: auto;
+}
+
+.chat-input {
+    display: flex;
+    padding: 15px;
+    background-color: #efefef;
+}
+
+.chat-input input {
+    flex: 1;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+
+.chat-input button {
+    background-color: #4285f4;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Estilos para indicador de digitação */
+.typing-indicator {
+    display: flex;
+    padding: 8px;
+    margin-bottom: 15px;
+    background-color: #f1f1f1;
+    border-radius: 10px;
+    max-width: 55px;
+    margin-right: auto;
+}
+
+.typing-indicator span {
+    height: 8px;
+    width: 8px;
+    background-color: #999;
+    border-radius: 50%;
+    display: inline-block;
+    margin-right: 5px;
+    animation: bounce 1.3s linear infinite;
+}
+
+.typing-indicator span:nth-child(2) {
+    animation-delay: 0.15s;
+}
+
+.typing-indicator span:nth-child(3) {
+    animation-delay: 0.3s;
+    margin-right: 0;
+}
+
+@keyframes bounce {
+    0%, 60%, 100% {
+        transform: translateY(0);
+    }
+    30% {
+        transform: translateY(-5px);
+    }
+}
+
+/* Responsividade */
+@media (min-width: 768px) {
+    .container {
+        flex-direction: row;
+    }
+    
+    .upload-container {
+        flex: 1;
+    }
+    
+    .chat-container {
+        flex: 2;
+    }
+}
