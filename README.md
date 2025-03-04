@@ -1,2 +1,5 @@
 # Teste de funcionalidade do rag
-TO TESTANDO O RAG MANO QUAERO APRENDE AS IA PRA EU VIRAR UM MONSTRO TECNOLOGICO.
+Projeto simples pra eu poder aprender os básicos em relação a tecnologia de IA,
+desejo aprender com este projeto pelo menos um pouco de javascript pra não ficar 
+feito de uma maneira porca. eu possuo uma imensa dificuldade quando o assunto é
+aprender JavaScript.
